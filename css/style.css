@@ -1,0 +1,42 @@
+img {
+    height: 50px;
+    width: 50px;
+}
+
+header {
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    width: 50%;
+}
+
+.items {
+    border: 1px solid black;
+    margin: 50px 0px;
+}
+
+.active {
+    background-color: aquamarine;
+}
+
+.container-items {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.container-items>.row-item {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: #222222;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.container-items .row-item .item-cart>button {
+    height: 50%;
+}
+
+.active {
+    background-color: aquamarine;
+}
