@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title></title>
@@ -14,7 +15,7 @@
     <header class="container">
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <h2>Supermercado</h2>
+                <h2>Frutería</h2>
             </div>
         </div>
     </header>
@@ -22,32 +23,71 @@
         <div class="row row-frutas">
             <div class="col d-flex justify-content-around">
                 <div class="d-flex flex-column align-items-center items" draggable="true">
+                    <h6 class="text-center">Cerezas</h6>
                     <img src="img/cereza.png" alt="cereza" class="item-img">
                     <span class="item-price">12€</span>
                 </div>
                 <div class="d-flex flex-column align-items-center items" draggable="true">
+                    <h6 class="text-center">Plátanos</h6>
                     <img src="img/platanos.png" alt="platanos" class="item-img">
                     <span class="item-price">5€</span>
                 </div>
                 <div class="d-flex flex-column align-items-center items" draggable="true">
+                    <h6 class="text-center">Manzanas</h6>
                     <img src="img/manzana.png" alt="manzana" class="item-img">
                     <span class="item-price">7€</span>
+                </div>
+                <div class="d-flex flex-column align-items-center items" draggable="true">
+                    <h6 class="text-center">Papayas</h6>
+                    <img src="img/papaya.png" alt="papaya" class="item-img">
+                    <span class="item-price">6€</span>
+                </div>
+            </div>
+        </div>
+        <div class="row row-frutas">
+            <div class="col d-flex justify-content-around">
+                <div class="d-flex flex-column align-items-center items" draggable="true">
+                    <h6 class="text-center">Naranjas</h6>
+                    <img src="img/naranja.png" alt="naranja" class="item-img">
+                    <span class="item-price">9€</span>
+                </div>
+                <div class="d-flex flex-column align-items-center items" draggable="true">
+                    <h6 class="text-center">Kiwis</h6>
+                    <img src="img/Kiwi.png" alt="aguacate" class="item-img">
+                    <span class="item-price">8€</span>
+                </div>
+                <div class="d-flex flex-column align-items-center items" draggable="true">
+                    <h6 class="text-center">Mangos</h6>
+                    <img src="img/mango.png" alt="mango" class="item-img">
+                    <span class="item-price">7€</span>
+                </div>
+                <div class="d-flex flex-column align-items-center items" draggable="true">
+                    <h6 class="text-center">Melocotones</h6>
+                    <img src="img/melocoton.png" alt="melocoton" class="item-img">
+                    <span class="item-price">11€</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container container-items">
-    </div>
-    <div class="container">
-        <div class="row cart">
-            <div class="col d-flex justify-content-center align-items-center" id="cart">
-                <img src="img/carrito.png" alt="carrito">
-                <p class="d-flex">Total:</p>
-                <p class="costeTotal">0€</p>
+    <section>
+        <h3 class="text-center">Arrastra aquí tu compra</h3>
+        <div class="container container-items">
+        </div>
+        <div class="container">
+            <div class="row cart">
+                <div class="col d-flex justify-content-center align-items-center" id="cart">
+                    <img src="img/carrito.png" alt="carrito">
+                    <p class="d-flex">Total:</p>
+                    <span class="badge badge-pill badge-info costeTotal">0€</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center" id="cart">
+                    <button type="button" class="btn btn-primary btn-lg btn-block btnBuy">Realizar compra</button>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>

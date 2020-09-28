@@ -46,7 +46,7 @@ function addItemInfo(e) {
     newDiv.innerHTML = `
         <div class="row row-item">
             <div class="col">
-                <div class="item-cart-fruta d-flex justify-content-around item-cart" draggable="true">
+                <div class="item-cart-fruta d-flex justify-content-around itemCart" draggable="true">
                     <div>
                         <img class="item-img" src="${itemImg}" alt="manzana">
                         <span class="badge badge-pill badge-light itemPriceCart">${itemPrice}</span>
@@ -87,3 +87,12 @@ function updatePriceItems() {
 
     shoppingCartTotal.innerHTML = `${total}€`;
 };
+
+// Botón comprar y vaciar carrito
+
+document.querySelector(".btnBuy").addEventListener("click", (e) => {
+    alert("Compra realizada, tu pedido llegará pronto");
+
+    itemsCart.innerHTML = "";
+    updatePriceItems();
+});

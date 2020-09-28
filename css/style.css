@@ -1,43 +1,88 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background-color: #FFB8B8;
+    color: #fff;
+}
+
 img {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
 }
 
 header {
     margin: 20px;
     padding: 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #fff;
     width: 50%;
 }
 
+header h2 {
+    font-size: 50px;
+}
+
+
+/* -- ELEMENTOS PARA SELECCIONAR -- */
+
 .items {
-    border: 1px solid black;
+    border: 1px solid #42948d;
+    padding: 20px;
     margin: 50px 0px;
+    background-color: #5CCEC4;
+    border-radius: 0.5em;
+}
+
+.items:hover {
+    background-color: #8AE7DC;
+}
+
+.items>span {
+    font-size: 25px;
+}
+
+.items>h6 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .active {
-    background-color: aquamarine;
+    background-color: #8AE7DC;
+    color: #fff;
 }
 
+
+/* -- CARRTIO -- */
+
 .container-items {
-    border: 1px solid black;
+    border: 2px solid #fff;
+    border-radius: 0.5em;
     padding: 20px;
+    background-color: #FFB8B8;
+}
+
+section h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.container-items .row-item .item-cart-fruta div>img {
+    height: 50px;
+    width: 50px;
 }
 
 .row-item {
     padding: 10px;
     margin: 10px;
-    background-color: #4d4b4b;
+    background-color: #FFE0CA;
     color: #fff;
     border-radius: 10px;
 }
 
-.container-items .row-item .item-cart>button {
-    height: 50%;
+.row-item span {
+    font-size: 20px;
 }
 
-.active {
-    background-color: aquamarine;
+.container-items .row-item .item-cart>button {
+    height: 50%;
 }
 
 #cart {
@@ -49,6 +94,20 @@ header {
 }
 
 #cart>p {
-    font-size: 20px;
+    font-size: 30px;
     margin: 0px 5px;
+}
+
+#cart>span {
+    font-size: 30px;
+    margin: 0px 5px;
+}
+
+button {
+    font-family: sans-serif;
+}
+
+.btnBuy {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
 }
