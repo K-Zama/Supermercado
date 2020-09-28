@@ -1,7 +1,7 @@
 let addItemsToCart = document.querySelectorAll(".items");
 let itemsCart = document.querySelector(".container-items");
 
-const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
+const addToShoppingCartButtons = document.querySelectorAll(".addToCart");
 
 // Eventos del Drag & Drop
 
@@ -9,10 +9,12 @@ for (let addItemToCart of addItemsToCart) {
     addItemToCart.addEventListener("dragstart", catchItemInfo);
 
     addItemToCart.addEventListener("drag", (e) => {
+        e.preventDefault();
         e.target.classList.add("active");
     });
 
     addItemToCart.addEventListener("dragend", (e) => {
+        e.preventDefault();
         e.target.classList.remove("active");
     });
 
@@ -49,7 +51,7 @@ function addItemInfo(e) {
                         <img class="item-img" src="${itemImg}" alt="manzana">
                         <span class="badge badge-pill badge-light itemPriceCart">${itemPrice}</span>
                     </div>
-                    <button type="button" class="btn btn-danger align-self-center" id="btn-delete">X</button>
+                    <button type="button" class="btn btn-danger align-self-center" id="btn-delete" onclick="deleteCartElement(this)">X</button>
                 </div>
             </div>
         </div>
@@ -58,14 +60,23 @@ function addItemInfo(e) {
     itemsCart.appendChild(newDiv);
 
     updatePriceItems();
-}
+};
+
+// Botón de eliminar elemento
+
+function deleteCartElement(element) {
+    element.parentElement.parentElement.parentElement.remove();
+
+    updatePriceItems();
+};
+
+// Actualizar precio
 
 function updatePriceItems() {
     let total = 0;
 
     const shoppingCartTotal = document.querySelector(".costeTotal");
     const shoppingCartItems = document.querySelectorAll(".row-item");
-    console.log(shoppingCartTotal.textContent);
 
     for (let shoppingCartItem of shoppingCartItems) {
         let shoppingCartItemPriceElement = shoppingCartItem.querySelector(".itemPriceCart");
