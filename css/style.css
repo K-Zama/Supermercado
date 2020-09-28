@@ -24,11 +24,10 @@ header {
     padding: 20px;
 }
 
-.container-items>.row-item {
-    border: 1px solid black;
+.row-item {
     padding: 10px;
     margin: 10px;
-    background-color: #222222;
+    background-color: #4d4b4b;
     color: #fff;
     border-radius: 10px;
 }
@@ -39,4 +38,17 @@ header {
 
 .active {
     background-color: aquamarine;
+}
+
+#cart {
+    padding: 30px;
+}
+
+#cart>img {
+    margin: 20px;
+}
+
+#cart>p {
+    font-size: 20px;
+    margin: 0px 5px;
 }

@@ -24,29 +24,55 @@ for (let addItemToCart of addItemsToCart) {
 };
 
 function catchItemInfo(e) {
-    const button = e.target;
-    const item = button.closest('.items');
+    const itemElement = e.target;
+    const item = itemElement.closest('.items');
 
     const itemPrice = item.querySelector(".item-price").textContent;
     const itemImg = item.querySelector(".item-img").src;
 
-    console.log(itemPrice, itemImg);
-
-    // setData establece la info que queremos compartir y getData obtener
-    e.dataTransfer.setData("text/html", "<p>Polla</p>");
-
-    addItemInfo(itemPrice, itemImg)
+    e.dataTransfer.setData("img", itemImg);
+    e.dataTransfer.setData("price", itemPrice);
 };
 
-function addItemInfo(itemPrice, itemImg) {
+// Añadir en el HTML
+
+function addItemInfo(e) {
+    const itemPrice = e.dataTransfer.getData("price");
+    const itemImg = e.dataTransfer.getData("img");
+
     let newDiv = document.createElement("div");
     newDiv.innerHTML = `
-        <p>${itemPrice}</p>
-        <img src="${itemImg}">
+        <div class="row row-item">
+            <div class="col">
+                <div class="item-cart-fruta d-flex justify-content-around item-cart" draggable="true">
+                    <div>
+                        <img class="item-img" src="${itemImg}" alt="manzana">
+                        <span class="badge badge-pill badge-light itemPriceCart">${itemPrice}</span>
+                    </div>
+                    <button type="button" class="btn btn-danger align-self-center" id="btn-delete">X</button>
+                </div>
+            </div>
+        </div>
     `;
-    // e.dataTransfer.getData("text");
+
     itemsCart.appendChild(newDiv);
-    /*e.preventDefault();
-    let itemAdd = `<p>Hola</p>`
-    console.log();*/
+
+    updatePriceItems();
 }
+
+function updatePriceItems() {
+    let total = 0;
+
+    const shoppingCartTotal = document.querySelector(".costeTotal");
+    const shoppingCartItems = document.querySelectorAll(".row-item");
+    console.log(shoppingCartTotal.textContent);
+
+    for (let shoppingCartItem of shoppingCartItems) {
+        let shoppingCartItemPriceElement = shoppingCartItem.querySelector(".itemPriceCart");
+        const shoppingCartItemPrice = Number(shoppingCartItemPriceElement.textContent.replace("€", ""));
+
+        total = total + shoppingCartItemPrice;
+    };
+
+    shoppingCartTotal.innerHTML = `${total}€`;
+};
