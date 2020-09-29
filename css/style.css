@@ -59,6 +59,10 @@ header h2 {
     background-color: #FFB8B8;
 }
 
+.container-items:hover {
+    background-color: #f38989;
+}
+
 section h3 {
     font-size: 40px;
     margin-bottom: 30px;
